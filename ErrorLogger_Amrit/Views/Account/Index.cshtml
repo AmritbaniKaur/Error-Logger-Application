@@ -1,0 +1,25 @@
+﻿@model List<DatabaseEntityModel.UserModel>
+@using DatabaseEntityModel;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Account Information</h2>
+@{
+    DatabaseModelFromDb db = new DatabaseModelFromDb();
+}
+<h4>Current number of users of this application: @Model.Count()</h4>
+
+@foreach (UserModel item in Model)
+{
+    @Html.ActionLink(@item.FirstName, "ViewDetails", new { id = @item.UserId });
+    <br />
+}
+
+<br /><br />
+@Html.ActionLink("Add New User", "AddUser")
+
+
+
+

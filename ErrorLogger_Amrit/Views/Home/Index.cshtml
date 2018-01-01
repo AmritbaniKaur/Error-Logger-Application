@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>@Html.ActionLink("Register", "AddUser", "Account")</li>
+                <li>@Html.ActionLink("Sign In", "LoginUser", "Account")</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h2>Error Logger</h2>

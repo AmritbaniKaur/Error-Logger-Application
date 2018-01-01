@@ -1,0 +1,78 @@
+﻿@model Common.UserAppsModelView
+
+@{
+    ViewBag.Title = "ViewDetails";
+}
+
+<h2>View Details</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(@model => Model._userId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(@model => Model._userId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(@model => Model._firstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(@model => Model._firstName)
+        </dd>
+
+        <!--Display Last Name in table format-->
+        <dt>
+            @Html.DisplayNameFor(@model => Model._lastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(@model => Model._lastName)
+        </dd>
+
+        <!--Display Email Id-->
+        <dt>
+            @Html.DisplayNameFor(@model => Model._email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(@model => Model._email)
+        </dd>
+
+        <!--Display Password-->
+        <dt>
+            @Html.DisplayNameFor(@model => Model._password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(@model => Model._password)
+        </dd>
+
+        <!--Display Role-->
+        <dt>
+            @Html.DisplayNameFor(@model => Model._role)
+        </dt>
+        <dd>
+            @Html.DisplayFor(@model => Model._role)
+        </dd>
+
+        <!--Display Applications-->
+        @*@foreach (var item in Model.allApplications)*@
+        @foreach (var item in Model.allApplications)
+        {
+            <dt>
+                @Html.DisplayNameFor(@model => item.ApplicationName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(@model => item.ApplicationName)
+            </dd>
+        }
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "EditDetails", new { id = Model.UserId }) |*@
+
+    @Html.ActionLink("Edit", "EditDetails", new { id = Model._userId }) |
+    @Html.ActionLink("Back", "ViewUsers", "Account")
+</p>
+
+

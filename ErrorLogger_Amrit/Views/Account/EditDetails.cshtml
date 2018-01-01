@@ -1,0 +1,120 @@
+﻿@*@model DatabaseEntityModel.UserModel
+@using DatabaseEntityModel;*@
+
+@model Common.UserAppsModelView
+
+@{
+    ViewBag.Title = "EditDetails";
+}
+
+<h2>Edit Details</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>User Model</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model._userId) <!-- it is just checking the User Id; it can't be edited-->
+
+        <div class="form-group">
+            @Html.LabelFor(model => model._userId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(@model => Model._userId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <!--Editing First Name-->
+            @Html.LabelFor(model => model._firstName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model._firstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model._firstName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <!--Editing Last Name-->
+            @Html.LabelFor(model => model._lastName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model._lastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model._lastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <!--Editing Email-->
+            @Html.LabelFor(model => model._email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model._email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model._email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <!--Editing Password-->
+            @Html.LabelFor(model => model._password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model._password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model._password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!--Editing UserStatus-->
+        <div class="form-group">
+            @Html.LabelFor(model => model._userStatus, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model._userStatus, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model._userStatus, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <!--Editing Applications-->
+        @foreach (var item in Model.allApplications)
+        {
+            <div class="form-group">
+                @Html.LabelFor(model => item.ApplicationName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(model => item.ApplicationName)
+                </div>
+            </div>
+        }
+        <!--Editing Role-->
+        @*<div class="form-group">
+            @Html.LabelFor(model => model._role, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model._role, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model._role, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+        <!--Last Login Date-->
+        @*<div class="form-group">
+                @Html.LabelFor(model => model._lastLoginDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model._lastLoginDate, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model._lastLoginDate, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+        @*@Html.HiddenFor(model => model._userId)*@
+            @*@Html.HiddenFor(model => model._role)
+            @Html.HiddenFor(model => model._lastLoginDate)*@
+
+            @*@Html.HiddenFor(model => model.allApplications)*@
+            @*@Html.HiddenFor(model => model.allErrors)*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Home", "AdminPage", "Account")
+</div>
+
