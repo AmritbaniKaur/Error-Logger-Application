@@ -1,4 +1,8 @@
-===========================================================================================================
+
+# Error Logger Application
+
+----------------------------------------------------------------------------------
+
  - The application shall consist of 3 parts – a REST webservice, a website and a library for logging.
  - The web application shall implement strong authentication.
  - The web application shall support two roles – admin and user.
@@ -46,4 +50,5 @@
  - Your project shall not reveal technical details to the user.
  - Your project shall not use any external libraries, with the exception of libraries available via Nuget.
  - Your project shall implement an error logger, following best practices described in class.
-===========================================================================================================
+ 
+----------------------------------------------------------------------------------
