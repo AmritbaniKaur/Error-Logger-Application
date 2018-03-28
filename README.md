@@ -1,8 +1,6 @@
 
 # Error Logger Application
 
-----------------------------------------------------------------------------------
-
  - The application shall consist of 3 parts – a REST webservice, a website and a library for logging.
  - The web application shall implement strong authentication.
  - The web application shall support two roles – admin and user.
