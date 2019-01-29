@@ -1,19 +1,19 @@
 
 # Error Logger Application
 
- - The application shall consist of 3 parts – a REST webservice, a website and a library for logging.
- - The web application shall implement strong authentication.
- - The web application shall support two roles – admin and user.
- - The web application shall collect the following data about each user:
+ - The application consists of 3 parts – a REST webservice, a website and a library for logging.
+ - The web application implements strong authentication.
+ - The web application supports two roles – admin and user.
+ - The web application collects the following data about each user:
 	First Name
 	Last Name
 	Email
 	Password
 	Active/Inactive
 	Last login date
- - The web application shall allow an admin to create a new application.
- - The web application shall allow an admin to assign a user to an application.
- - The web application shall allow an admin to disable an existing application.
+ - The web application allows an admin to create a new application.
+ - The web application allows an admin to assign a user to an application.
+ - The web application allows an admin to disable an existing application.
  - Admin shall be able to access all applications and all data for them.
  - Upon login, user shall be presented with a list of their applications.
  - User’s access shall be restricted to only active applications to which they are allowed access.
@@ -26,27 +26,27 @@
  - The webservice shall receive error logs and save them into the database.
  - Extra work on performance.
  - Extra work on stability.
- - The library shall collect all necessary data and log them into the database.
+ - The library collects all necessary data and log them into the database.
  - Extra work on performance.
  - Extra work on stability.
  - The library shall be configured at application startup w/ the ID of the application for which we are saving.
- - The web application shall use the logger for its own logging.
- - Your application shall have a look and feel of a polished final product.
+ - The web application uses the logger for its own logging.
+ - The application has a look and feel of a polished final product.
  - Extra work on UI.
- - You shall only use Visual Studio or a text editor of your choosing for the HTML and CSS editing
- - Your web applications will be hosted in IIS.
- - Your REST service shall be hosted in IIS.
- - Your project shall use MVC .Net 5.0+ w/ Razer.
- - Your project shall use .Net 4.5+, with C#.
- - Your project shall use HTML, JS and CSS.
- - You shall store almost all of your CSS in separate files (vs. inline styles/scripts).
- - You shall store almost all of your JS in separate files (vs. inline styles/scripts).
- - You shall use our class DB server.
- - Your application’s code shall be properly organized, supports reuse and testing.
- - Your project shall be stable (no uncaught exceptions).
- - Your project shall be secure (no unauthorized access).
- - Your project shall not reveal technical details to the user.
- - Your project shall not use any external libraries, with the exception of libraries available via Nuget.
- - Your project shall implement an error logger, following best practices described in class.
+ - Used Visual Studio or a text editor of your choosing for the HTML and CSS editing
+ - Web applications is hosted in IIS.
+ - REST service is hosted in IIS.
+ - Used MVC .Net 5.0+ w/ Razer.
+ - Used .Net 4.5+, with C#.
+ - Used HTML, JS and CSS.
+ - Stored almost all of your CSS in separate files (vs. inline styles/scripts).
+ - Stored almost all of your JS in separate files (vs. inline styles/scripts).
+ - Used our class DB server.
+ - The application’s code is properly organized, supports reuse and testing.
+ - The project is stable (no uncaught exceptions).
+ - The project is secure (no unauthorized access).
+ - The project does not reveal any technical details to the user.
+ - The project does not use any external libraries, with the exception of libraries available via Nuget.
+ - The project does implement an error logger, following best practices described in class.
  
 ----------------------------------------------------------------------------------
