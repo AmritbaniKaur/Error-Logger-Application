@@ -15,21 +15,21 @@
  - The web application allows an admin to assign a user to an application.
  - The web application allows an admin to disable an existing application.
  - Admin shall be able to access all applications and all data for them.
- - Upon login, user shall be presented with a list of their applications.
- - User’s access shall be restricted to only active applications to which they are allowed access.
- - A user shall be able to select, from this list a applications to view.
- - The web application shall present the user with error log data in two forms:
- - List of errors, displaying all of the data
+ - Upon login, user is presented with a list of their applications.
+ - User’s access is restricted to only active applications to which they are allowed access.
+ - A user is able to select, from this list a applications to view.
+ - The web application presents the user with error log data in two forms:
+ - List of errors, displays all of the data
  - A graphical representation of the errors (by category, over time, or a suitable combination).
- - The web application shall allow the user to filter, search and order the logs, on all categories/columns.
- - The selection of the filtered data shall impact the graphical display.
- - The webservice shall receive error logs and save them into the database.
+ - The web application allows the user to filter, search and order the logs, on all categories/columns.
+ - The selection of the filtered data impacts the graphical display.
+ - The webservice receives error logs and save them into the database.
  - Extra work on performance.
  - Extra work on stability.
  - The library collects all necessary data and log them into the database.
  - Extra work on performance.
  - Extra work on stability.
- - The library shall be configured at application startup w/ the ID of the application for which we are saving.
+ - The library is configured at application startup w/ the ID of the application for which we are saving.
  - The web application uses the logger for its own logging.
  - The application has a look and feel of a polished final product.
  - Extra work on UI.
